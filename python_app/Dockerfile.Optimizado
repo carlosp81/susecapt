@@ -1,0 +1,9 @@
+FROM python:3.8.10-slim-buster
+LABEL maintainer="Carlos Pimentel"
+RUN pip install --upgrade pip && pip install pipenv
+ENV PROJECT_DIR /webapp
+WORKDIR ${PROJECT_DIR}
+COPY app.py requirements.txt ${PROJECT_DIR}/
+RUN pipenv install && pipenv install --deploy   
+CMD ["pipenv", "run", "python", "app.py"]
+
