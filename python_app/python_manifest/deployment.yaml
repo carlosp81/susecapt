@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: python-hw
+  name: python-hw
+  namespace: default 
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: python-hw
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: python-hw
+    spec:
+      containers:
+      - image: susecapt/python-helloworld:v1.0 
+        imagePullPolicy: IfNotPresent
+        name: python-hellowworld
+        resources:
+          requests:
+            cpu: 50m
+            memory: 256Mi
