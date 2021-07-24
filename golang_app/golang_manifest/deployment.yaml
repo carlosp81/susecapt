@@ -23,7 +23,7 @@ spec:
       containers:
       - image: susecapt/go-helloworld:v1.0 
         imagePullPolicy: IfNotPresent
-        name: multi-go
+        name: go-helloworld
         resources:
           requests:
             cpu: 50m
