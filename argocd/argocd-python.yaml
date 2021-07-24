@@ -10,6 +10,6 @@ spec:
   project: default
   source:
     path: python_app/python-manifest
-    repoURL: https://github.com/susecapt/ 
+    repoURL: https://github.com/carlosp81/susecapt/ 
     targetRevision: HEAD
   syncPolicy: {}
