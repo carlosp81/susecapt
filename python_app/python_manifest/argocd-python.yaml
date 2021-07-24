@@ -5,8 +5,8 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: k3d-udacity
-    server: https://kubernetes.k3d-udacity.svc
+    namespace: default
+    server: https://kubernetes.default.svc
   project: default
   source:
     path: python_app/python-manifests
