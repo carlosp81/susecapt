@@ -2,14 +2,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: phw
+    app: python-helloworld
   name: phw
   namespace: default 
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: phw
+      app: python-helloworld
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -18,12 +18,12 @@ spec:
   template:
     metadata:
       labels:
-        app: phw
+        app: python-helloworld
     spec:
       containers:
       - image: susecapt/python-helloworld:v1.0 
         imagePullPolicy: IfNotPresent
-        name: python-hellowworld
+        name: python-helloworld
         resources:
           requests:
             cpu: 50m
