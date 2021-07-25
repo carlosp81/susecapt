@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: python-helloworld
-  name: phw
+  name: python-helloworld
   namespace: default 
 spec:
   replicas: 3
