@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: python_app/python-manifest
+    path: python_app/python_manifest
     repoURL: https://github.com/carlosp81/susecapt/
     targetRevision: HEAD
   syncPolicy: {}
