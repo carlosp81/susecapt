@@ -4,7 +4,7 @@ metadata:
   labels:
     app: golang-hw
   name: golang-hw
-  namespace: default 
+  namespace: apps 
 spec:
   replicas: 2
   selector:
