@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: golang/manifest
+    path: golang_app/manifest
     repoURL: https://github.com/carlosp81/susecapt/
     targetRevision: HEAD
   syncPolicy: {}
